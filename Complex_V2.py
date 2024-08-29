@@ -21,7 +21,7 @@ def findTheta(a,b):
         theta = atan(b/a)
     return theta
 
-def checkComplex(real,imaginary):
+def checkComplex(real,imaginary,radius,angle):
     ## if statements for checking if the result is Real, Imaginary, or Complex
     if round(imaginary,4) == 0: #Real results only
         print("\nThe result is Real:\n\t", round(real,4))
@@ -53,7 +53,7 @@ while (n != "n" and n != "N"):
         else: # otherwise, the general form can be computed
             real = radius*cos(angle) # computes the Real part of the Complex number; the 'a' in "a + bi"
             imaginary = radius*sin(angle) # computes the Imaginary part of the Complex number; the 'b' in "a + bi"
-            checkComplex(real,imaginary)
+            checkComplex(real,imaginary,radius,angle)
 
     elif n == "n" or n == "N":
         print("\nBye-bye!")
